@@ -21,6 +21,13 @@ Do the following:
 */
 
 
+const votingAge = 19;
+if(votingAge >= 18) {
+  console.log('true')
+} else {
+  console.log('false')
+}
+
 
 /*
 Task 1b - Values (not auto tested)
@@ -35,6 +42,14 @@ Do the following:
 */
 
 
+let firstThing = 5;
+const secondThing = 10;
+console.log(firstThing);
+
+if(firstThing <= secondThing) {
+  firstThing = 999;
+  console.log(firstThing);
+}
 
 
 
@@ -48,6 +63,12 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+
+let yearly = '1999';
+const intProof = parseInt(yearly) + 1;
+console.log(intProof);
+
 
 
 
@@ -65,7 +86,7 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 
-
+console.log(multiply(24, 10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
