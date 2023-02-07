@@ -98,9 +98,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanAge){
+  return humanAge * 7
 }
+
+console.log(dogYears(5));
 
 
 
@@ -150,10 +152,27 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(DogAge, DogWeight){
+  if(DogAge >= 1 && DogWeight <= 5) {
+    return DogWeight * 0.05;
+  }else if(DogAge >= 1 && DogWeight >=6 && DogWeight <= 10) {
+    return DogWeight * 0.04;
+  }else if(DogAge >= 1 && DogWeight >=11 && DogWeight <= 15) {
+    return DogWeight * 0.03;
+  }else if(DogAge >= 1 && DogWeight > 15) {
+    return DogWeight * 0.02;
+  }else if(DogAge < 1 && DogAge >= 0.583) {
+    return DogWeight * 0.04;
+  }else if(DogAge < 0.583 && DogAge >= 0.333) {
+    return DogWeight * 0.05;
+  }else if(DogAge < 0.333) {
+    return DogWeight * 0.1;
+  }else {
+    return 'please try again'
+  }
 }
 
+console.log('task 3', hungryDog(1, 15));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -176,12 +195,31 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let computer = Math.random();
 
-function game(user, computer){
-  /*add your code here*/
+if(computer <= 0.34) {
+  computer = 'rock';
+} else if(computer <= 0.67) {
+  computer = 'paper';
+} else if(computer > 0.67) {
+  computer = 'scissors';
 }
+console.log(computer);
+function game(user, computer){
+  if(user === 'paper' && computer === 'rock') {
+    return 'you win!'
+  }else if(user === 'scissors' && computer === 'paper') {
+    return 'you win!'
+  }else if(user === 'rock' && computer === 'scissors') {
+    return 'you win!'
+  }else if(user === computer) {
+    return "it's a tie"
+  }else {
+    return 'you lose!'
+  }
 
-
+}
+console.log(game('paper', computer))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
