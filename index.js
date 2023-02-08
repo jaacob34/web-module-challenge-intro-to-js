@@ -152,7 +152,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(DogAge, DogWeight){
+function hungryDog(DogWeight, DogAge){
   if(DogAge >= 1 && DogWeight <= 5) {
     return DogWeight * 0.05;
   }else if(DogAge >= 1 && DogWeight >=6 && DogWeight <= 10) {
@@ -172,7 +172,7 @@ function hungryDog(DogAge, DogWeight){
   }
 }
 
-console.log('task 3', hungryDog(1, 15));
+console.log('task 3', hungryDog(4, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -232,11 +232,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371
 }
-
-
+console.log(miles(2.5))
 
 //Task 5b - Centimeters to Feet
 /*
@@ -246,10 +245,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
-
+console.log(feet(160))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -266,10 +265,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(soda){
+  for(let i = soda; i > 0; i--){
+  return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`
+  }
 }
-
+console.log(annoyingSong(5))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -286,10 +287,20 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(score >= 90) {
+    return 'you got an A';
+  } else if(score < 90 && score >= 80) {
+    return 'you got a B';
+  } else if(score < 80 && score >= 70) {
+    return 'you got a C'
+  } else if(score < 70 && score >= 60) {
+    return 'you got a D'
+  } else if(score < 60) {
+    return 'you got an F'
+  }
 }
-
+console.log(grade(59))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
